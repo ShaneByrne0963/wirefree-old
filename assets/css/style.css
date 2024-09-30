@@ -20,6 +20,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
+    cursor: pointer;
 }
 
 #main-body {
@@ -35,10 +36,26 @@
     left: 32px;
     width: 400px;
     height: calc(100% - 64px);
+    cursor: default;
 }
 
 #side-panel-top {
     display: block;
     text-align: right;
     padding: 4px;
+}
+
+#side-panel.closed {
+    margin: 16px;
+    width: 368px;
+    height: calc(100% - 96px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#side-panel.animate {
+    transition: width 0.3s ease-out,
+                height 0.3s ease-out,
+                margin 0.3s ease-out,
+                opacity 0.3s ease-out;
 }
