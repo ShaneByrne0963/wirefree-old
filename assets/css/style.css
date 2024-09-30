@@ -26,6 +26,7 @@
 #main-body {
     position: relative;
     background-color: #EEEEEE;
+    overflow: hidden;
 }
 
 /* Side Panel */
