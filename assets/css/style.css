@@ -1,0 +1,32 @@
+/* General Purpose Classes */
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+/* Main */
+
+#body-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#main-body {
+    position: relative;
+    background-color: #EEEEEE;
+}
+
+/* Side Panel */
+
+#side-panel {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 400px;
+    height: calc(100% - 64px);
+}
