@@ -8,6 +8,12 @@
     height: 100%;
 }
 
+.close {
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
 /* Main */
 
 #body-container {
@@ -29,4 +35,10 @@
     left: 32px;
     width: 400px;
     height: calc(100% - 64px);
+}
+
+#side-panel-top {
+    display: block;
+    text-align: right;
+    padding: 4px;
 }
