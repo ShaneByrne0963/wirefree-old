@@ -1,8 +1,9 @@
-const mousePosition = {
+const mouse = {
     x: 0,
     y: 0,
     xPrevious: 0,
-    yPrevious: 0
+    yPrevious: 0,
+    selectedShape: ''
 }
 
 /**
@@ -28,8 +29,8 @@ function moveElement(elementQuery=this) {
     let movingElement = $(elementQuery);
     let top = parseInt(movingElement.css('top'));
     let left = parseInt(movingElement.css('left'));
-    left += mousePosition.x - mousePosition.xPrevious;
-    top += mousePosition.y - mousePosition.yPrevious;
+    left += mouse.x - mouse.xPrevious;
+    top += mouse.y - mouse.yPrevious;
     movingElement.css('top', `${top}px`).css('left', `${left}px`);
 }
 
@@ -59,8 +60,8 @@ $('document').ready(() => {
 $('body').on('mousemove', (e) => {
     let mouseX = e.pageX;
     let mouseY = e.pageY;
-    mousePosition.x = mouseX;
-    mousePosition.y = mouseY;
+    mouse.x = mouseX;
+    mouse.y = mouseY;
 
     // All functions involving mouse movement should be called here
     $('.moving').each(function() {
@@ -68,6 +69,6 @@ $('body').on('mousemove', (e) => {
         moveElement((moveData) ? moveData : this);
     });
 
-    mousePosition.xPrevious = mouseX;
-    mousePosition.yPrevious = mouseY;
+    mouse.xPrevious = mouseX;
+    mouse.yPrevious = mouseY;
 });
