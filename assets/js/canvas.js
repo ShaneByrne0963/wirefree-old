@@ -23,9 +23,20 @@ function canvasMouseUp(e) {
 function sizeCanvasElement() {
     let sizingElement = $('.canvas-element.sizing').get(0);
     if (sizingElement) {
-        let width = Math.abs($(sizingElement).attr('data-origin-x') - mouse.xCanvas);
-        let height = Math.abs($(sizingElement).attr('data-origin-y') - mouse.yCanvas);
+        // Getting the size of the element
+        let xOrigin = $(sizingElement).attr('data-origin-x');
+        let yOrigin = $(sizingElement).attr('data-origin-y');
+        let width = Math.abs(xOrigin - mouse.xCanvas);
+        let height = Math.abs(yOrigin - mouse.yCanvas);
         $(sizingElement).css('width', `${width}px`).css('height', `${height}px`);
+
+        // Allowing negative sizes
+        if (mouse.xCanvas < xOrigin) {
+            $(sizingElement).css('left', `${mouse.xCanvas}px`);
+        }
+        if (mouse.yCanvas < yOrigin) {
+            $(sizingElement).css('top', `${mouse.yCanvas}px`);
+        }
     }
 }
 
