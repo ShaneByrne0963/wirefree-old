@@ -3,6 +3,8 @@ const mouse = {
     y: 0,
     xPrevious: 0,
     yPrevious: 0,
+    xCanvas: 0,
+    yCanvas: 0,
     selectedShape: ''
 }
 
@@ -34,6 +36,20 @@ function moveElement(elementQuery=this) {
     movingElement.css('top', `${top}px`).css('left', `${left}px`);
 }
 
+/**
+ * Returns a set of coordinates in relation to the canvas origin
+ * @param {Integer} x 
+ * @param {Integer} y 
+ * @returns {Object} { x, y }
+ */
+function getCanvasCoordinates(x, y) {
+    let canvasRect = $('#canvas').get(0).getBoundingClientRect();
+    return {
+        x: x - canvasRect.left,
+        y: y - canvasRect.top
+    }
+}
+
 $('document').ready(() => {
     $(".dropdown-trigger").dropdown({
         constrainWidth: false,
@@ -63,7 +79,14 @@ $('body').on('mousemove', (e) => {
     mouse.x = mouseX;
     mouse.y = mouseY;
 
-    // All functions involving mouse movement should be called here
+    // Storing the mouse position in relation to the canvas
+    let canvasCoords = getCanvasCoordinates(mouseX, mouseY);
+    mouse.xCanvas = canvasCoords.x;
+    mouse.yCanvas = canvasCoords.y;
+
+    // All functions that need the previous position of the mouse should be called below
+
+    // Moving elements with the mouse
     $('.moving').each(function() {
         let moveData = $(this).attr('data-move');
         moveElement((moveData) ? moveData : this);
