@@ -34,36 +34,9 @@
     color: #212529;
 }
 
-/* Side Panel */
+/* Canvas */
 
-#side-panel {
-    position: absolute;
-    top: 32px;
-    left: 32px;
-    width: 400px;
-    height: calc(100% - 64px);
-    cursor: default;
-    z-index: 1;
-    transition: width 0.3s ease-out,
-                height 0.3s ease-out,
-                margin 0.3s ease-out,
-                opacity 0.3s ease-out;
-}
-
-#side-panel-top {
-    display: block;
-    text-align: right;
-    padding: 4px;
-}
-
-#side-panel.closed {
-    margin: 16px;
-    width: 368px;
-    height: calc(100% - 96px);
-    opacity: 0;
-    pointer-events: none;
-}
-
-#side-panel.moving {
-    z-index: 100;
+#canvas {
+    width: 100%;
+    height: 100%;
 }

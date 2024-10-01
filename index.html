@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/sidepanel.css" type="text/css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
@@ -26,11 +27,21 @@
         <ul id="dropdown1" class="dropdown-content">
             <li><a id="window-side-panel" href="#" class="text-black">Side Panel</a></li>
         </ul>
-        <!-- Container for the side panel -->
         <div id="main-body">
+            <!-- Wireframe Canvas -->
+            <div id="canvas">
+
+            </div>
+            <!-- Container for the side panel -->
             <div id="side-panel" class="card">
                 <div id="side-panel-top" class="red lighten-1" data-move="#side-panel">
                     <i id="side-panel-close" class="material-icons close">close</i>
+                </div>
+                <div id="side-panel-shapes">
+                    <div id="shape-rectangle" class="shape"><div></div></div>
+                    <div id="shape-roundrect" class="shape"><div></div></div>
+                    <div id="shape-circle" class="shape"><div></div></div>
+                    <div id="shape-triangle" class="shape"><div></div></div>
                 </div>
             </div>
         </div>
