@@ -23,6 +23,12 @@ function moveElement() {
 }
 
 $('document').ready(() => {
+    $(".dropdown-trigger").dropdown({
+        constrainWidth: false,
+        coverTrigger: false
+    });
+
+    
     $('#side-panel-top').click(function(e) {
         // Closing the side panel if the X is clicked
         let clickedElement = e.target;

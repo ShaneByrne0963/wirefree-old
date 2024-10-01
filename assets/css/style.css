@@ -20,13 +20,12 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    cursor: pointer;
+    overflow: hidden;
 }
 
 #main-body {
     position: relative;
     background-color: #EEEEEE;
-    overflow: hidden;
 }
 
 /* Side Panel */
@@ -38,6 +37,7 @@
     width: 400px;
     height: calc(100% - 64px);
     cursor: default;
+    z-index: 1;
 }
 
 #side-panel-top {
@@ -59,4 +59,8 @@
                 height 0.3s ease-out,
                 margin 0.3s ease-out,
                 opacity 0.3s ease-out;
+}
+
+#side-panel.moving {
+    z-index: 100;
 }
