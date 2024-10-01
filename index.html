@@ -19,12 +19,17 @@
         <nav class="red lighten-1">
             <div class="nav-wrapper">
                 <ul id="nav-mobile" class="hide-on-med-and-down">
-                    <li><a class="waves-effect waves-light" href="#">File</a></li>
-                    <li><a class="waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown1">Window</a></li>
+                    <li><a class="waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown-file">File</a></li>
+                    <li><a class="waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown-window">Window</a></li>
                 </ul>
             </div>
         </nav>
-        <ul id="dropdown1" class="dropdown-content">
+        <!-- File tab dropdown -->
+        <ul id="dropdown-file" class="dropdown-content">
+            <li><a id="file-new-project" href="#" class="text-black">New Project</a></li>
+        </ul>
+        <!-- Window tab dropdown -->
+        <ul id="dropdown-window" class="dropdown-content">
             <li><a id="window-side-panel" href="#" class="text-black">Side Panel</a></li>
         </ul>
         <div id="main-body">
