@@ -28,6 +28,12 @@
     background-color: #EEEEEE;
 }
 
+/* Navigation Bar */
+
+.dropdown-content li>a {
+    color: #212529;
+}
+
 /* Side Panel */
 
 #side-panel {
@@ -38,6 +44,10 @@
     height: calc(100% - 64px);
     cursor: default;
     z-index: 1;
+    transition: width 0.3s ease-out,
+                height 0.3s ease-out,
+                margin 0.3s ease-out,
+                opacity 0.3s ease-out;
 }
 
 #side-panel-top {
@@ -52,13 +62,6 @@
     height: calc(100% - 96px);
     opacity: 0;
     pointer-events: none;
-}
-
-#side-panel.animate {
-    transition: width 0.3s ease-out,
-                height 0.3s ease-out,
-                margin 0.3s ease-out,
-                opacity 0.3s ease-out;
 }
 
 #side-panel.moving {
