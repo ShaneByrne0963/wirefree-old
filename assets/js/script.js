@@ -5,13 +5,17 @@ const mousePosition = {
     yPrevious: 0
 }
 
+/**
+ * Closes an element, starting a growing and fade in animation until the element fully appears
+ * @param {Query} elementQuery The element to be opened
+ */
 function openElement(elementQuery=this) {
     $(elementQuery).removeClass('closed');
 }
 
 /**
- * Closes an element, starting a shrinking and fading animation until the element disappears
- * @param {String} elementId The id of the element to be closed
+ * Closes an element, starting a shrinking and fade out animation until the element disappears
+ * @param {Query} elementQuery The element to be closed
  */
 function closeElement(elementQuery=this) {
     $(elementQuery).removeClass('closed').addClass('closed');
