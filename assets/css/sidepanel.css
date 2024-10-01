@@ -69,10 +69,36 @@
     border-radius: 50%;
 }
 
-#shape-triangle>div:first-child {
+/* Triangles */
+
+#shape-triangle-up>div:first-child {
     background-color: transparent;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
     border-top-color: transparent;
     border-bottom: 28px solid #737373;
+}
+
+#shape-triangle-right>div:first-child {
+    background-color: transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right-color: transparent;
+    border-left: 28px solid #737373;
+}
+
+#shape-triangle-down>div:first-child {
+    background-color: transparent;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom-color: transparent;
+    border-top: 28px solid #737373;
+}
+
+#shape-triangle-left>div:first-child {
+    background-color: transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left-color: transparent;
+    border-right: 28px solid #737373;
 }
